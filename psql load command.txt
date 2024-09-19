@@ -1,0 +1,5 @@
+COMMAND TO DUMP DATABASE TO TAR:
+	$Env:PGPASSWORD='password'; pg_dump -U postgres -d wmmr_a_to_z -F t -f out.tar
+
+COMMAND TO RESTORE TAR DATABASE DUMP:
+	$Env:PGPASSWORD='password'; pg_restore --verbose --clean -U wmmr_a_to_z -d databruce out.tar
